@@ -313,7 +313,7 @@ describe("The payroll system", function () {
       ]
 
       describe("from several imported CSV structures", function () {
-        let employeeRecords
+        let employeeRecords 
 
         describe("calculatePayroll", function() {
           it("exists", function () {
@@ -339,6 +339,7 @@ describe("The payroll system", function () {
                 createTimeOutEvent.call(rec, timeOutStamp)
               })
             }) 
+            console.log(employeeRecords)
             expect(calculatePayroll(employeeRecords)).to.eql(11880)
           })
         })
